@@ -12,12 +12,11 @@ class Jwtserver {
         const response = await fetch(url, {
             method: 'POST',
             headers: {
-                'Content-type': 'application/json'
+                'Content-Type': 'application/json;charset=UTF-8'
             },
             body: JSON.stringify(data)
         });
         const resData = await response.json();
-        console.log(resData);
         return resData;
     }
 
