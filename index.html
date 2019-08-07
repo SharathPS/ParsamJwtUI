@@ -5,15 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <title>Parsam JWT Bro</title>
 </head>
 
 <body>
-    <!-- Navbar -->
     <nav>
         <div class="nav-wrapper blue">
             <div class="container">
@@ -23,14 +20,13 @@
     </nav>
     <br>
     <div class="container">
-        <!-- Form Card -->
         <div class="card">
             <div class="card-content">
                 <form class="col">
                     <div class="row">
                         <div class="col s6">
                             <div class="input-field col s12">
-                                <textarea class="materialize-textarea" placeholder="Paste encoded token" id="encoded-token"></textarea>
+                                <textarea class="materialize-textarea" placeholder="Paste token here" id="encoded-token"></textarea>
                                 <label for="encoded-token">Encoded token</label>
                             </div>
                         </div>
@@ -40,25 +36,17 @@
                                 <textarea class="materialize-textarea" disabled="true" placeholder="Header" id="decoded-header"></textarea>
                                 <textarea class="materialize-textarea" disabled="true" placeholder="Payload" id="decoded-payload"></textarea>
                                 <textarea class="materialize-textarea" disabled="true" placeholder="Signature" id="decoded-signature"></textarea>
+                                <input type="text" class="validate" placeholder="Paste Secret to validate signature" id="secret">
                             </div>
                         </div>
-                        <!--<button class="add-btn btn blue darken-3"><i class="fa fa-pencil fa-fw"></i> Decode
-                            Token</button>-->
-                        <button class="update-btn btn orange"><i class="fa fa-check-square"></i> Verify
-                            Signature</button>
                     </div>
                 </form>
             </div>
         </div>
-
         <br>
-        <div class="card">
-            <!-- Token History -->
+        <div class="card" id="token-history">
             <h6 class="center-align">Token History</h6>
-
-            <!-- Item List -->
             <ul id="item-list" class="collection">
-
             </ul>
         </div>
     </div>
